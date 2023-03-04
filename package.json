@@ -1,0 +1,21 @@
+{
+  "name": "student-enrollment-de",
+  "version": "1.0.0",
+  "description": "Student enrollment backend",
+  "main": "index.js",
+  "scripts": {
+    "create_data": "node seeds.js",
+    "create_tables": "node tables.js",
+    "start": "node index.js",
+    "start:dev": "node --watch index.js"
+  },
+  "author": "Juan Manuel Grajales",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "mariadb": "^3.1.0",
+    "sequelize": "^6.29.0"
+  }
+}
