@@ -1,3 +1,4 @@
+require("dotenv").config();
 const {
   createStudent,
   getAllStudents,
@@ -26,6 +27,7 @@ const {
 const express = require("express");
 const cors = require("cors");
 const app = express();
+const port = process.env.DB_NAME || 5000;
 app.use(express.json());
 app.use(cors());
 
@@ -65,6 +67,6 @@ app.delete("/subjects/:id", deleteSubject);
 // Enroll routes
 app.post("/enroll", enrollSubjects);
 
-app.listen(5000, () =>
-  console.log("servidor iniciado en http://localhost:5000")
+app.listen(port, () =>
+  console.log(`servidor iniciado en http://localhost:${port}`)
 );
